@@ -59,7 +59,25 @@
 .show {
     position: relative;
     left: 0;
-    transition: 0.7s ease-in-out;
+    animation: ticketarrived 1.5s ease-in-out;
+}
+
+@keyframes ticketarrived {
+    0%{
+        left: 2000px;
+    }
+    25%{
+        left: 2000px;
+    }
+    50%{
+        left: 0px;
+    }
+    75%{
+        left: 250px;
+    }
+    100%{
+        left: 0;
+    }
 }
 
 form {
@@ -139,7 +157,9 @@ button:hover {
     cursor: pointer;
 }
 
-
+button:focus {
+    outline: none;
+}
 
 .container h2 {
     text-transform: uppercase;
@@ -160,7 +180,6 @@ button:hover {
 
 .ticket-generato {
     width: 100%;
-    /* background-color: red; */
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.9);
     color: white;
