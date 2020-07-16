@@ -27,7 +27,6 @@ btnGenerazione.addEventListener("click", function(){
     }
 
 
-
     erroreanag.innerHTML = "";
     erroreKm.innerHTML = "";
 
