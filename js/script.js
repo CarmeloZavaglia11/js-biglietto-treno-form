@@ -9,18 +9,27 @@ btnGenerazione.addEventListener("click", function(){
     var anagrafica = document.getElementById('anagrafica').value;
     var kilometri = document.getElementById('kilometri').value;
     var eta = document.getElementById('eta').value;
-    var errore = document.getElementById('errore-anagrafica');
+    var erroreanag = document.getElementById('errore-anagrafica');
+    var erroreKm = document.getElementById('errore-km');
     var ticket = document.getElementById('ticket');
 
     var numeri = RegExp('[0-9]' );
     var carSpec = RegExp('[!@#$%^&*()+=,./{}|:<>?]');
 
     while((numeri.test(anagrafica) == true) || (carSpec.test(anagrafica) == true) || anagrafica == ''){
-       errore.innerHTML = "ERRORE RIPROVA!";
+       erroreanag.innerHTML = "ERRORE RIPROVA!";
        return;
     }
 
-    errore.innerHTML = "";
+    while((numeri.test(kilometri) == false) || (carSpec.test(kilometri) == true) || kilometri == ''){
+       erroreKm.innerHTML = "ERRORE RIPROVA!";
+       return;
+    }
+
+
+
+    erroreanag.innerHTML = "";
+    erroreKm.innerHTML = "";
 
     var prezzoNoSconto = kilometri * 0.21 ;
     var scontoMinori = prezzoNoSconto * 20 / 100;
@@ -50,8 +59,10 @@ btnGenerazione.addEventListener("click", function(){
 );
 
 btnAnnullamento.addEventListener("click", function(){
+    var ticket = document.getElementById('ticket');
     document.getElementById('anagrafica').value = '';
     document.getElementById('kilometri').value = '';
+    ticket.className = 'ticket hidden';
 }
 );
 
