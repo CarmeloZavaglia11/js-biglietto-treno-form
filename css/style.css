@@ -111,6 +111,10 @@ select {
     margin: 20px;
 }
 
+.kilometri {
+    padding-right: 35px;
+}
+
 .insert-dati {
     display: flex;
     flex-direction: column;
