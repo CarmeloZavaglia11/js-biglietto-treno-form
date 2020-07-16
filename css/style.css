@@ -13,10 +13,31 @@
 .screen {
     width: 100vw;
     height: 100vh;
-    background-color: tomato;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.default {
+    background-image: url('https://i.picsum.photos/id/135/2560/1920.jpg?hmac=MAh0eBIqBNEgND6D2vgcIBIQ4BE1jzewN1QQWDfBBEY');
+    background-size: cover;
+}
+
+.flower {
+    background-image: url('https://i.picsum.photos/id/152/3888/2592.jpg?hmac=M1xv1MzO9xjf5-tz1hGR9bQpNt973ANkqfEVDW0-WYU');
+    background-size: cover;
+}
+
+.lion {
+    background-image: url('https://i.picsum.photos/id/1074/5472/3648.jpg?hmac=w-Fbv9bl0KpEUgZugbsiGk3Y2-LGAuiLZOYsRk0zo4A');
+    background-size: cover;
+    background-position: center;
+}
+
+.water {
+    background-image: url('https://i.picsum.photos/id/1041/5184/2916.jpg?hmac=TW_9o6HeD7H7I7NVo-S1Fa1iAvzQ10uvmJqsXvNoi0M');
+    background-size: cover;
 }
 
 .container {
@@ -25,7 +46,8 @@
     flex-direction: column;
     align-items: center;
     width: 80%;
-    background-color: yellow;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
 }
 
 form {
@@ -83,7 +105,7 @@ select {
     justify-content: space-around;
     align-items: center;
     width: 80%;
-    background-color: green;
+    /* background-color: green; */
     border-radius: 10px;
 }
 
@@ -112,8 +134,10 @@ button {
 
 .ticket-generato {
     width: 100%;
-    background-color: red;
+    /* background-color: red; */
     border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
 }
 
 .ticket-generato h4 {

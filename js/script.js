@@ -1,14 +1,14 @@
 var btnGenerazione = document.getElementById('genera');
 var btnAnnullamento = document.getElementById('annulla');
+var btnTemplate = document.getElementById('btn-template');
+
 
 btnGenerazione.addEventListener("click", function(){
+
     var anagrafica = document.getElementById('anagrafica').value;
     var kilometri = document.getElementById('kilometri').value;
     var eta = document.getElementById('eta').value;
     var errore = document.getElementById('errore-anagrafica');
-
-
-
 
     var numeri = RegExp('[0-9]' );
     var carSpec = RegExp('[!@#$%^&*()+=,./{}|:<>?]');
@@ -39,16 +39,37 @@ btnGenerazione.addEventListener("click", function(){
     document.getElementById('nome-pass').innerHTML = anagrafica;
     // document.getElementById('sconto').innerHTML = anagrafica;
     document.getElementById('carrozza').innerHTML = Math.floor(Math.random() * (10 - 1)) + 1;
-    document.getElementById('codcp').innerHTML = Math.floor(Math.random() * (100000 - 90000)) + 90000;
+    document.getElementById('codcp').innerHTML = Math.floor(Math.random() * (99999 - 90000)) + 90000;
     document.getElementById('costo').innerHTML = prezzoFinale.toPrecision(3) + '€';
 
 }
 );
 
 btnAnnullamento.addEventListener("click", function(){
-    location.reload();
+    document.getElementById('anagrafica').value = '';
+    document.getElementById('kilometri').value = '';
 }
 );
+
+
+btnTemplate.addEventListener("click", function(){
+    var template = document.getElementById('template').value;
+
+    var scren = document.getElementById('scren');
+
+    if (template == 'Default') {
+        scren.className = 'screen default';
+    }  else if (template == 'Flower') {
+        scren.className = 'screen flower';
+    }  else if (template == 'Lion') {
+        scren.className = 'screen lion';
+    }  else if(template == 'Water'){
+        scren.className = 'screen water';
+    }
+}
+);
+
+
 
 
 
