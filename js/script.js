@@ -25,9 +25,9 @@ btnGenerazione.addEventListener("click", function(){
     var scontoOver = prezzoNoSconto * 40 / 100;
     var prezzoFinale = prezzoNoSconto;
 
-    if (eta == 'Maggiorenne') {
+    if (eta == 'Minorenne') {
         prezzoFinale = prezzoNoSconto - scontoMinori;
-        document.getElementById('sconto').innerHTML = "Sconto Maggiorenne"
+        document.getElementById('sconto').innerHTML = "Sconto Minorenne"
     } else if (eta == 'Over65')  {
         prezzoFinale = prezzoNoSconto - scontoOver;
         document.getElementById('sconto').innerHTML = "Sconto Silver";
