@@ -1,6 +1,7 @@
 var btnGenerazione = document.getElementById('genera');
 var btnAnnullamento = document.getElementById('annulla');
 var btnTemplate = document.getElementById('btn-template');
+var template = document.getElementById('template').value = 'Default';
 
 
 btnGenerazione.addEventListener("click", function(){
@@ -9,6 +10,7 @@ btnGenerazione.addEventListener("click", function(){
     var kilometri = document.getElementById('kilometri').value;
     var eta = document.getElementById('eta').value;
     var errore = document.getElementById('errore-anagrafica');
+    var ticket = document.getElementById('ticket');
 
     var numeri = RegExp('[0-9]' );
     var carSpec = RegExp('[!@#$%^&*()+=,./{}|:<>?]');
@@ -42,6 +44,8 @@ btnGenerazione.addEventListener("click", function(){
     document.getElementById('codcp').innerHTML = Math.floor(Math.random() * (99999 - 90000)) + 90000;
     document.getElementById('costo').innerHTML = prezzoFinale.toPrecision(3) + '€';
 
+    ticket.className = 'ticket show';
+
 }
 );
 
@@ -68,47 +72,3 @@ btnTemplate.addEventListener("click", function(){
     }
 }
 );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// var nomeUtente = prompt('ciao visitatore, inserisci il nome');
-// document.getElementById('nome').innerHTML = nomeUtente;
-// var utente = document.getElementById('nome');
-// // utente.classList.add('red');
-// // utente.className = 'red';

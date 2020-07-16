@@ -50,6 +50,18 @@
     border-radius: 10px;
 }
 
+.hidden{
+    position: relative;
+    left: 2000px;
+    transition: 0.7s ease-in-out;
+}
+
+.show {
+    position: relative;
+    left: 0;
+    transition: 0.7s ease-in-out;
+}
+
 form {
     text-align: center;
     width: 100%;
@@ -110,10 +122,20 @@ select {
 }
 
 button {
+    color: white;
     padding: 10px 20px;
     border-radius: 20px;
     margin: 10px;
+    background-image: linear-gradient(to right, #000000 0%, #434343 51%, #000000 100%);
+    transition: 0.5s;
 }
+
+button:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
 
 .container h2 {
     text-transform: uppercase;
@@ -142,6 +164,8 @@ button {
 
 .ticket-generato h4 {
     font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .ticket-generato h5,
@@ -162,5 +186,5 @@ button {
 .costo {
     width: calc(100% / 5);
     float: left;
-    padding: 70px 25px;
+    padding: 70px 2px;
 }
