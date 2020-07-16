@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    overflow: hidden;
+}
+
 .clearfix:after {
     content: '';
     display: table;
