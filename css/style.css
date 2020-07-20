@@ -5,7 +5,8 @@
 }
 
 body {
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .clearfix:after {
@@ -63,7 +64,7 @@ body {
 .show {
     position: relative;
     left: 0;
-    animation: ticketarrived 1.5s ease-in-out;
+    animation: ticketarrived 1.5s ease-in-out ;
 }
 
 .error {
